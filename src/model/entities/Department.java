@@ -53,7 +53,10 @@ public class Department implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Department [id=" + id + ", name=" + name + "]";
+		StringBuilder sb = new StringBuilder();
+		sb.append(String.format(" ID:           %d\n", id));
+		sb.append(String.format(" Nome:         %s\n", name));
+		return sb.toString();
 	}
 
 }
