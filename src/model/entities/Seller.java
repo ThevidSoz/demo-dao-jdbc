@@ -14,19 +14,19 @@ public class Seller implements Serializable {
 	private Date birthDate;
 	private Double baseSalary;
 
-	private Departament departament;
+	private Department Department;
 
 	public Seller() {
 
 	}
 
-	public Seller(Integer id, String name, String email, Date birthDate, Double baseSalary, Departament departament) {
+	public Seller(Integer id, String name, String email, Date birthDate, Double baseSalary, Department Department) {
 		this.id = id;
 		this.name = name;
 		this.email = email;
 		this.birthDate = birthDate;
 		this.baseSalary = baseSalary;
-		this.departament = departament;
+		this.Department = Department;
 	}
 
 	public Integer getId() {
@@ -69,12 +69,12 @@ public class Seller implements Serializable {
 		this.baseSalary = baseSalary;
 	}
 
-	public Departament getDeparttament() {
-		return departament;
+	public Department getDeparttament() {
+		return Department;
 	}
 
-	public void setDeparttament(Departament departament) {
-		this.departament = departament;
+	public void setDeparttament(Department Department) {
+		this.Department = Department;
 	}
 
 	@Override
@@ -103,8 +103,8 @@ public class Seller implements Serializable {
 	    sb.append(String.format(" Email:        %s\n", email));
 	    sb.append(String.format(" Nascimento:   %s\n", birthDate != null ? birthDate : "N/A"));
 	    sb.append(String.format(" Salário Base: R$ %.2f\n", baseSalary != null ? baseSalary : 0.0));
-	    sb.append(String.format(" Departamento: %s\n", 
-	            departament != null ? departament.getName() + " (ID: " + departament.getId() + ")" : "N/A"));
+	    sb.append(String.format(" Departmento: %s\n", 
+	            Department != null ? Department.getName() + " (ID: " + Department.getId() + ")" : "N/A"));
 	    sb.append("========================================");
 	    return sb.toString();
 	}
