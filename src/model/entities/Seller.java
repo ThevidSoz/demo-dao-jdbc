@@ -103,7 +103,7 @@ public class Seller implements Serializable {
 	    sb.append(String.format(" Email:        %s\n", email));
 	    sb.append(String.format(" Nascimento:   %s\n", birthDate != null ? birthDate : "N/A"));
 	    sb.append(String.format(" Salário Base: R$ %.2f\n", baseSalary != null ? baseSalary : 0.0));
-	    sb.append(String.format(" Departmento: %s\n", 
+	    sb.append(String.format(" Departamento: %s\n", 
 	            Department != null ? Department.getName() + " (ID: " + Department.getId() + ")" : "N/A"));
 	    sb.append("========================================");
 	    return sb.toString();
