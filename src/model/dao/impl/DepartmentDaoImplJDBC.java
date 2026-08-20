@@ -126,7 +126,7 @@ public class DepartmentDaoImplJDBC implements DepartmentDao {
 		ResultSet rs = null;
 
 		try {
-			st = conn.prepareStatement("SELECT * FROM department");
+			st = conn.prepareStatement("SELECT department.* FROM department");
 
 			rs = st.executeQuery();
 
